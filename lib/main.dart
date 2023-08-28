@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-      fontFamily: 'Lato',
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellow)),//by mentioning the font family here I dont have to include my custom font everytime in the TextStyle property of a text
+      fontFamily: 'Lato',//by mentioning the font family here I dont have to include my custom font everytime in the TextStyle property of a text
+      colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellow),
+      ),
       title: 'Shopping App',
       home: const HomePage(),
     );

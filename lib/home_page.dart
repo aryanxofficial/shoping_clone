@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/global_variables.dart';
+import 'package:shop_app/product_card.dart';
 
 //I am changing this stateless widget to a stateful widget because I want to know the filter that has been clicked on and that will change the state of the selectedFilter variable
 class HomePage extends StatefulWidget {
@@ -76,16 +78,35 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.all(8.0),
                         child: GestureDetector(
                           onTap: () {
+                            setState(() {});
                             selectedFilter = filter;
                             print(selectedFilter);
                           },
                           child: Chip(
+                            backgroundColor: selectedFilter == filter
+                                // ? Color.fromARGB(255, 252, 228, 12)
+                                ? Theme.of(context)
+                                    .colorScheme
+                                    .primary // from this line I can basically inherit the properties of the parent widget. I am using the colorscheme that is defined inside the colorscheme of the themeData inside my material App.
+                                : const Color.fromARGB(255, 241, 239, 239),
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 10, vertical: 15),
                             label: Text(filter),
                             labelStyle: const TextStyle(color: Colors.black),
                           ),
                         ),
+                      );
+                    }),
+              ),
+              Expanded(
+                child: ListView.builder(
+                    itemCount: products.length,
+                    itemBuilder: (context, index) {
+                      final product = products[index];
+                      return productCard(
+                        title: product['title'] as String,
+                        price: product['price'] as String,
+                        image: product['imageURL'] as String,
                       );
                     }),
               )
