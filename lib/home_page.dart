@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/global_variables.dart';
 import 'package:shop_app/product_card.dart';
+import 'package:shop_app/product_detail_page.dart';
 
 //I am changing this stateless widget to a stateful widget because I want to know the filter that has been clicked on and that will change the state of the selectedFilter variable
 class HomePage extends StatefulWidget {
@@ -103,10 +104,21 @@ class _HomePageState extends State<HomePage> {
                     itemCount: products.length,
                     itemBuilder: (context, index) {
                       final product = products[index];
-                      return productCard(
-                        title: product['title'] as String,
-                        price: product['price'] as String,
-                        image: product['imageURL'] as String,
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return ProductDetailPage(product: product);
+                          }));
+                        },
+                        child: productCard(
+                          title: product['title'] as String,
+                          price: product['price'] as String,
+                          image: product['imageURL'] as String,
+                          backgroundColor: index.isEven
+                              ? Color.fromARGB(255, 137, 204, 235)
+                              : const Color.fromARGB(255, 241, 239, 239),
+                        ),
                       );
                     }),
               )

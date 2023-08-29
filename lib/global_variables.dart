@@ -4,7 +4,7 @@ final products = [
     'title': 'Men\'s Nike Shoes',
     'price': '5000',
     'sizes': [8, 9, 10],
-    'imageURL': 'assets/images/shoes_1.png',
+    'imageURL': 'assets/images/shoes_4.png',
     'company': 'Nike',
   },
   {
@@ -28,7 +28,7 @@ final products = [
     'title': 'Men\'s Nike Shoes',
     'price': '5000',
     'sizes': [8, 9, 10],
-    'imageURL': 'assets/images/shoes_4.png',
+    'imageURL': 'assets/images/shoes_1.png',
     'company': 'Nike',
   }
 ];
