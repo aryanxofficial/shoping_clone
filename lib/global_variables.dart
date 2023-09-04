@@ -1,7 +1,7 @@
 final products = [
   {
     'id': '0',
-    'title': 'Men\'s Nike Shoes',
+    'title': 'Jordan',
     'price': '5000',
     'sizes': [8, 9, 10],
     'imageURL': 'assets/images/shoes_4.png',
@@ -9,7 +9,7 @@ final products = [
   },
   {
     'id': '1',
-    'title': 'Men\'s Nike Shoes',
+    'title': 'Fila',
     'price': '5000',
     'sizes': [8, 9, 10],
     'imageURL': 'assets/images/shoes_2.png',
@@ -17,7 +17,7 @@ final products = [
   },
   {
     'id': '2',
-    'title': 'Men\'s Nike Shoes',
+    'title': 'Nike',
     'price': '5000',
     'sizes': [8, 9, 10],
     'imageURL': 'assets/images/shoes_3.png',
@@ -25,7 +25,7 @@ final products = [
   },
   {
     'id': '3',
-    'title': 'Men\'s Nike Shoes',
+    'title': 'Sketchers',
     'price': '5000',
     'sizes': [8, 9, 10],
     'imageURL': 'assets/images/shoes_1.png',
@@ -33,13 +33,13 @@ final products = [
   }
 ];
 
-final cart = [
-  {
-    'id': '0',
-    'title': 'Men\'s Nike Shoes',
-    'price': '5000',
-    'size': [8, 9, 10],
-    'imageURL': '',
-    'company': 'Nike',
-  }
-];
+// final cart = [
+//   {
+//     'id': '0',
+//     'title': 'Men\'s Nike Shoes',
+//     'price': '5000',
+//     'size': [8, 9, 10],
+//     'imageURL': 'assets/images/shoes_4.png',
+//     'company': 'Nike',
+//   }
+// ];
