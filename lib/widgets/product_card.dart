@@ -41,7 +41,7 @@ class productCard extends StatelessWidget {
           Center(
             child: Image(
               image: AssetImage(image),
-              height: 200,
+              height: 150,
             ),
           )
         ],
